@@ -10,8 +10,9 @@
 # user-configurable defaults
 #
 
-java_version: 8
-java_subversion: 161
+java_version: 10
+java_subversion: 
+
 
 java_download_path: /tmp
 java_download_from_oracle: true
@@ -19,3 +20,8 @@ java_remove_download: true
 java_install_jce: false
 
 java_set_javahome: false
+
+proxy_env:
+  http_proxy: http://proxy.cfv.junta-andalucia.es:3128
+  https_proxy: http://proxy.cfv.junta-andalucia.es:3128
+  no_proxy: .cfv.junta-andalucia.es

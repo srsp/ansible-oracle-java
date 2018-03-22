@@ -5,7 +5,7 @@
 
 
 - name: fetch .rpm or .tar.gz files from Oracle site
-  include: fetch.yml
+  import_tasks: fetch.yml
   when: java_download_from_oracle
 
 - block:
@@ -33,15 +33,15 @@
 
 
 - name: delegate to RPM installation process
-  include: use-rpm.yml
+  import_tasks: use-rpm.yml
   when: use_rpm
 
 - name: delegate to raw tarball installation process
-  include: use-tarball.yml
+  import_tasks: use-tarball.yml
   when: use_tarball
 
 - name: delegate to Mac OS X dmg installation
-  include: use-dmg.yml
+  import_tasks: use-dmg.yml
   when: use_dmg
 
 - block:

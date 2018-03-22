@@ -11,11 +11,11 @@
 
   tasks:
     - name: Set role vars
-      include: tasks/set-role-variables.yml
+      import_tasks: tasks/set-role-variables.yml
 
     - name: Fetch .rpm or .tar.gz files from Oracle site
-      include: tasks/fetch.yml
+      import_tasks: tasks/fetch.yml
 
     - name: Fetch JCE files from Oracle site
-      include: tasks/fetch_jce.yml
+      import_tasks: tasks/fetch_jce.yml
 

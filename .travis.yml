@@ -5,7 +5,7 @@ services:
 
 
 matrix:
-  include:
+  import_tasks:
 
   - os: linux
     env: LINUX=ubuntu16.04
